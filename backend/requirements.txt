@@ -1,0 +1,5 @@
+flask==3.0.3
+flask-cors==4.0.1
+xlrd==1.2.0
+odfpy==1.4.1
+watchdog==4.0.1

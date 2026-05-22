@@ -1,0 +1,2017 @@
+>Feature ref|NP_267801.1|
+1	776	Protein
+			product	hypothetical protein
+3	775	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+24	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+299	495	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+330	337	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+333	334	Site
+336	338
+375	375
+410	411
+444	444
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+372	375	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+380	393	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+406	411	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+414	417	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+440	446	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+701	776	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|NP_268367.1|
+1	840	Protein
+			product	DNA mismatch repair protein MutS
+			function	DNA mismatch repair
+1	840	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+6	116	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+124	237	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+253	544	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+565	780	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+601	608	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+604	605	Site
+607	609
+645	645
+680	681
+715	715
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+642	645	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+650	663	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+676	681	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+684	687	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+711	717	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|NP_269838.1|
+1	779	Protein
+			product	DNA mismatch repair protein
+3	778	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<75	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+299	493	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+328	335	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+331	332	Site
+334	336
+373	373
+408	409
+442	442
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+370	373	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+378	391	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+404	409	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+412	415	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+438	444	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+704	778	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|NP_270064.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|NP_689086.1|
+1	858	Protein
+			product	DNA mismatch repair protein MutS
+1	858	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	>95	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	240	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+256	547	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	782	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+603	610	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+606	607	Site
+609	611
+647	647
+682	683
+717	717
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+644	647	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+652	665	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+678	683	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+686	689	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+713	719	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+1	858	Protein
+			product	DNA mismatch repair protein MutS
+
+>Feature ref|NP_722380.1|
+1	849	Protein
+			product	DNA mismatch repair protein MutS
+1	849	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	118	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+1	849	Protein
+			product	DNA mismatch repair protein MutS
+
+>Feature ref|NP_736198.1|
+1	779	Protein
+			product	MutS2 family protein
+3	778	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<75	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+299	493	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+328	335	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+331	332	Site
+334	336
+373	373
+408	409
+442	442
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+370	373	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+378	391	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+404	409	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+412	415	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+438	444	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+704	778	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|NP_736487.1|
+1	858	Protein
+			product	DNA mismatch repair protein MutS
+1	858	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	>95	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	240	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+256	547	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	782	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+603	610	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+606	607	Site
+609	611
+647	647
+682	683
+717	717
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+644	647	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+652	665	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+678	683	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+686	689	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+713	719	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|NP_803066.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_061143.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_193330.1|
+1	856	Protein
+			product	DNA mismatch repair protein MutS
+1	854	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+1	110	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+119	235	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+254	543	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+564	779	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+600	607	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+603	604	Site
+606	608
+644	644
+679	680
+714	714
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+641	644	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+649	662	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+675	680	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+683	686	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+710	716	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_193343.1|
+1	785	Protein
+			product	mismatch repair protein
+1	785	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+22	282	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+301	498	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+333	340	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+336	337	Site
+339	341
+378	378
+413	414
+447	447
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+375	378	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+383	396	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+409	414	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+417	420	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+443	449	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+710	785	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_281014.1|
+1	818	Protein
+			product	DNA mismatch repair protein
+42	817	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<114	316	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+338	532	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+367	374	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+370	371	Site
+373	375
+412	412
+447	448
+481	481
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+409	412	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+417	430	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+443	448	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+451	454	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+477	483	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+743	817	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_281279.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_283168.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_330630.1|
+1	858	Protein
+			product	DNA mismatch repair protein MutS
+1	858	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	>95	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	240	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+256	547	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	782	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+603	610	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+606	607	Site
+609	611
+647	647
+682	683
+717	717
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+644	647	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+652	665	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+678	683	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+686	689	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+713	719	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_330327.1|
+1	779	Protein
+			product	MutS2 family protein
+3	778	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<75	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+299	493	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+328	335	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+331	332	Site
+334	336
+373	373
+408	409
+442	442
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+370	373	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+378	391	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+404	409	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+412	415	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+438	444	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+704	778	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_394975.1|
+1	867	Protein
+			product	DNA mismatch repair protein MutS
+			function	3.3 DNA recombination, and repair
+1	866	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+8	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+128	243	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+263	552	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+573	788	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+609	616	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+612	613	Site
+615	617
+653	653
+688	689
+723	723
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+650	653	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+658	671	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+684	689	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+692	695	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+719	725	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_395006.1|
+1	787	Protein
+			product	MutS family DNA mismatch repair protein
+			function	3.3 DNA recombination, and repair
+1	787	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+21	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+302	499	Region
+			region_name	ABC_ATPase
+			note	ATP-binding cassette transporter nucleotide-binding domain
+			db_xref	CDD:247755
+334	341	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213179
+337	338	Site
+340	342
+379	379
+414	415
+448	448
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213179
+376	379	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213179
+384	397	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213179
+410	415	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213179
+418	421	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213179
+444	450	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213179
+<501	644	Region
+			region_name	BAR
+			note	The Bin/Amphiphysin/Rvs (BAR) domain, a dimerization module that binds membranes and detects membrane curvature
+			db_xref	CDD:245835
+712	787	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_535996.1|
+1	786	Protein
+			product	DNA mismatch repair protein
+1	786	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+17	283	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+302	499	Region
+			region_name	ABC_ATPase
+			note	ATP-binding cassette transporter nucleotide-binding domain
+			db_xref	CDD:247755
+334	341	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213179
+337	338	Site
+340	342
+379	379
+414	415
+448	448
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213179
+376	379	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213179
+384	397	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213179
+410	415	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213179
+418	421	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213179
+444	450	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213179
+711	786	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_536019.1|
+1	876	Protein
+			product	DNA mismatch repair protein MutS
+1	874	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+8	120	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+128	243	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+260	552	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+573	788	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+609	616	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+612	613	Site
+615	617
+653	653
+688	689
+723	723
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+650	653	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+658	671	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+684	689	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+692	695	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+719	725	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_597547.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_599237.1|
+1	818	Protein
+			product	DNA mismatch repair protein mutS
+42	817	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<114	316	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+338	532	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+367	374	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+370	371	Site
+373	375
+412	412
+447	448
+481	481
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+409	412	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+417	430	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+443	448	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+451	454	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+477	483	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+743	817	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_599507.1|
+1	851	Protein
+			product	DNA mismatch repair protein mutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_601182.1|
+1	818	Protein
+			product	DNA mismatch repair protein mutS
+42	817	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<114	316	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+338	532	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+367	374	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+370	371	Site
+373	375
+412	412
+447	448
+481	481
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+409	412	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+417	430	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+443	448	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+451	454	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+477	483	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+743	817	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_601434.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_603114.1|
+1	818	Protein
+			product	DNA mismatch repair protein mutS
+42	817	Region
+			region_name	COG1193
+			note	Mismatch repair ATPase (MutS family) [DNA replication, recombination, and repair]
+			db_xref	CDD:224114
+<114	316	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+338	532	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+367	374	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+370	371	Site
+373	375
+412	412
+447	448
+481	481
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+409	412	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+417	430	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+443	448	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+451	454	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+477	483	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+743	817	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_603416.1|
+1	851	Protein
+			product	DNA mismatch repair protein MutS
+1	851	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	119	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	239	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+255	546	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+567	781	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+602	609	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+605	606	Site
+608	610
+646	646
+681	682
+716	716
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+643	646	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+651	664	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+677	682	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+685	688	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+712	718	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_619389.1|
+1	787	Protein
+			product	DNA mismatch repair protein MutS2
+			function	3.3 DNA recombination, and repair
+2	787	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+19	285	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+304	501	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+336	343	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+339	340	Site
+342	344
+381	381
+416	417
+450	450
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+378	381	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+386	399	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+412	417	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+420	423	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+446	452	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+712	787	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_619402.1|
+1	856	Protein
+			product	DNA mismatch repair protein MutS
+			function	3.3 DNA recombination, and repair
+1	855	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	114	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+127	243	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+262	552	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+559	792	Region
+			region_name	MutS_V
+			note	MutS domain V
+			db_xref	CDD:215944
+607	614	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213179
+610	611	Site
+613	615
+651	651
+686	687
+721	721
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213179
+648	651	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213179
+656	669	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213179
+682	687	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213179
+690	693	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213179
+717	723	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213179
+
+>Feature ref|YP_795354.1|
+1	787	Protein
+			product	MutS family ATPase
+1	787	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+34	283	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+302	499	Region
+			region_name	ABC_ATPase
+			note	ATP-binding cassette transporter nucleotide-binding domain
+			db_xref	CDD:247755
+334	341	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213179
+337	338	Site
+340	342
+379	379
+414	415
+448	448
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213179
+376	379	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213179
+384	397	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213179
+410	415	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213179
+418	421	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213179
+444	450	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213179
+<528	>623	Region
+			region_name	ATP-synt_B
+			note	ATP synthase B/B' CF(0)
+			db_xref	CDD:247746
+712	787	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+
+>Feature ref|YP_795370.1|
+1	892	Protein
+			product	DNA mismatch repair protein MutS
+1	892	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+7	117	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+127	>219	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+258	551	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+571	786	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+607	614	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+610	611	Site
+613	615
+651	651
+686	687
+721	721
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+648	651	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+656	669	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+682	687	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+690	693	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+717	723	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_001032113.1|
+1	776	Protein
+			product	DNA mismatch repair protein mutS
+			function	Mismatch repair ATPase (MutS family)
+1	776	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+24	277	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+299	495	Region
+			region_name	ABC_MutS2
+			note	ATP-binding cassette domain of MutS2
+			db_xref	CDD:213247
+330	337	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213247
+333	334	Site
+336	338
+375	375
+410	411
+444	444
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213247
+372	375	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213247
+380	393	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213247
+406	411	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213247
+414	417	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213247
+440	446	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213247
+701	776	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+1	776	Protein
+			product	DNA mismatch repair protein MutS
+			function	Mismatch repair ATPase (MutS family)
+
+>Feature ref|YP_001033730.1|
+1	840	Protein
+			product	DNA mismatch repair protein MutS
+			function	Mismatch repair ATPase (MutS family)
+1	840	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+6	116	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+124	237	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+253	544	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+565	780	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+601	608	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+604	605	Site
+607	609
+645	645
+680	681
+715	715
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+642	645	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+650	663	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+676	681	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+684	687	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+711	717	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+1	840	Protein
+			product	DNA mismatch repair protein MutS
+			function	Mismatch repair ATPase (MutS family)
+
+>Feature ref|YP_001271130.1|
+1	881	Protein
+			product	DNA mismatch repair protein MutS
+1	881	Region
+			region_name	PRK05399
+			note	DNA mismatch repair protein MutS; Provisional
+			db_xref	CDD:235444
+6	118	Region
+			region_name	MutS_I
+			note	MutS domain I
+			db_xref	CDD:216613
+126	241	Region
+			region_name	MutS_II
+			note	MutS domain II
+			db_xref	CDD:218486
+261	549	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+569	784	Region
+			region_name	ABC_MutS1
+			note	ATP-binding cassette domain of MutS1 homolog
+			db_xref	CDD:213251
+605	612	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213251
+608	609	Site
+611	613
+649	649
+684	685
+719	719
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213251
+646	649	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213251
+654	667	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213251
+680	685	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213251
+688	691	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213251
+715	721	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213251
+
+>Feature ref|YP_001271143.1|
+1	791	Protein
+			product	MutS2 family protein
+1	791	Region
+			region_name	PRK00409
+			note	recombination and DNA strand exchange inhibitor protein; Reviewed
+			db_xref	CDD:234750
+6	283	Region
+			region_name	MutS_III
+			note	MutS domain III
+			db_xref	CDD:218489
+303	499	Region
+			region_name	ABC_ATPase
+			note	ATP-binding cassette transporter nucleotide-binding domain
+			db_xref	CDD:247755
+334	341	Site
+			site_type	nitrosylation
+			note	Walker A/P-loop
+			db_xref	CDD:213179
+337	338	Site
+340	342
+379	379
+414	415
+448	448
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:213179
+376	379	Site
+			site_type	nitrosylation
+			note	Q-loop/lid
+			db_xref	CDD:213179
+384	397	Site
+			site_type	nitrosylation
+			note	ABC transporter signature motif
+			db_xref	CDD:213179
+410	415	Site
+			site_type	nitrosylation
+			note	Walker B
+			db_xref	CDD:213179
+418	421	Site
+			site_type	nitrosylation
+			note	D-loop
+			db_xref	CDD:213179
+444	450	Site
+			site_type	nitrosylation
+			note	H-loop/switch region
+			db_xref	CDD:213179
+717	791	Region
+			region_name	Smr
+			note	Smr domain
+			db_xref	CDD:216658
+

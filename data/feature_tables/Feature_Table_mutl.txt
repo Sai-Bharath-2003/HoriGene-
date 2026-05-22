@@ -1,0 +1,1110 @@
+>Feature ref|NP_268365.1|
+1	695	Protein
+			product	DNA mismatch repair protein
+			function	DNA mismatch repair
+42	680	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+63	>148	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+69	69	Site
+73	73
+76	76
+96	96
+98	98
+100	100
+102	103
+136	139
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+73	73	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+100	100	Site
+102	102
+136	136
+138	138
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+244	365	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+342	342	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+491	636	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|NP_270045.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|NP_608124.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|NP_665609.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|NP_689083.1|
+1	659	Protein
+			product	DNA mismatch repair protein
+4	646	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+28	120	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+32	32	Site
+36	36
+39	39
+59	59
+61	61
+63	63
+65	66
+99	102
+113	113
+115	115
+120	120
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+36	36	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+63	63	Site
+65	65
+99	99
+101	101
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+207	328	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+305	305	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+457	603	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+1	659	Protein
+			product	DNA mismatch repair protein MutL
+
+>Feature ref|NP_722378.1|
+1	651	Protein
+			product	DNA mismatch repair protein
+2	638	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>109	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+449	595	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+1	651	Protein
+			product	DNA mismatch repair protein MutL
+
+>Feature ref|NP_736485.1|
+1	657	Protein
+			product	DNA mismatch repair protein
+2	644	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+26	118	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+111	111
+113	113
+118	118
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+455	601	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|NP_803065.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_061121.1|
+1	673	Protein
+			product	DNA mismatch repair protein
+17	660	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+37	>121	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+43	43	Site
+47	47
+50	50
+70	70
+72	72
+74	74
+76	77
+110	113
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+47	47	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+74	74	Site
+76	76
+110	110
+112	112
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+218	339	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+316	316	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+471	617	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_193197.1|
+1	1165	Protein
+			product	transcriptional repair coupling factor
+21	1163	Region
+			region_name	Mfd
+			note	Transcription-repair coupling factor (superfamily II helicase) [DNA replication, recombination, and repair / Transcription]
+			db_xref	CDD:224118
+490	587	Region
+			region_name	CarD_TRCF
+			note	CarD-like/TRCF domain
+			db_xref	CDD:215001
+636	772	Region
+			region_name	DEXDc
+			note	DEAD-like helicases superfamily. A diverse family of proteins involved in ATP-dependent RNA or DNA unwinding. This domain contains the ATP-binding region.
+			db_xref	CDD:238005
+645	649	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238005
+743	746	Site
+			site_type	nitrosylation
+			note	putative Mg++ binding site [ion binding]
+			db_xref	CDD:238005
+799	929	Region
+			region_name	HELICc
+			note	Helicase superfamily c-terminal domain; associated with DEXDc-, DEAD-, and DEAH-box proteins, yeast initiation factor 4A, Ski2p, and Hepatitis C virus NS3 helicases; this domain is found in a wide variety of helicases and helicase related proteins; may ...
+			db_xref	CDD:238034
+831	834	Site
+856	857
+882	884
+			order
+			site_type	nitrosylation
+			note	nucleotide binding region [chemical binding]
+			db_xref	CDD:238034
+890	890	Site
+912	912
+916	916
+919	919
+			order
+			site_type	nitrosylation
+			note	ATP-binding site [chemical binding]
+			db_xref	CDD:238034
+1014	1114	Region
+			region_name	TRCF
+			note	This domain is found in proteins necessary for strand-specific repair in DNA such as TRCF in Escherichia coli
+			db_xref	CDD:198050
+
+>Feature ref|YP_281253.1|
+1	673	Protein
+			product	DNA mismatch repair protein
+17	660	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+37	>121	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+43	43	Site
+47	47
+50	50
+70	70
+72	72
+74	74
+76	77
+110	113
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+47	47	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+74	74	Site
+76	76
+110	110
+112	112
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+218	339	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+316	316	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+471	617	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_283167.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_330627.1|
+1	657	Protein
+			product	DNA mismatch repair protein
+2	644	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+26	118	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+111	111
+113	113
+118	118
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+455	601	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_394976.1|
+1	653	Protein
+			product	DNA mismatch repair protein
+			function	3.3 DNA recombination, and repair
+4	643	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+25	127	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+31	31	Site
+35	35
+38	38
+58	58
+60	60
+62	62
+64	65
+98	101
+114	114
+116	116
+121	122
+124	124
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+35	35	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+62	62	Site
+64	64
+98	98
+100	100
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+454	594	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_536018.1|
+1	659	Protein
+			product	DNA mismatch repair protein
+3	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	147	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+125	125
+136	136
+141	142
+144	144
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+204	321	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+302	302	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_597546.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_599482.1|
+1	673	Protein
+			product	DNA mismatch repair protein mutL
+17	660	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+37	>121	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+43	43	Site
+47	47
+50	50
+70	70
+72	72
+74	74
+76	77
+110	113
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+47	47	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+74	74	Site
+76	76
+110	110
+112	112
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+218	339	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+316	316	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+471	617	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_601433.1|
+1	660	Protein
+			product	DNA mismatch repair protein
+4	647	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>108	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+458	604	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_603390.1|
+1	673	Protein
+			product	DNA mismatch repair protein
+17	660	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+37	>121	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+43	43	Site
+47	47
+50	50
+70	70
+72	72
+74	74
+76	77
+110	113
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+47	47	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+74	74	Site
+76	76
+110	110
+112	112
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+218	339	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+316	316	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+471	617	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_619401.1|
+1	653	Protein
+			product	DNA mismatch repair protein
+			function	3.3 DNA recombination, and repair
+3	652	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	119	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+111	111
+113	113
+118	119
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+204	324	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+301	301	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+472	584	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_795369.1|
+1	672	Protein
+			product	DNA mismatch repair protein
+2	659	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	123	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+112	112
+114	114
+119	120
+122	122
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+203	324	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+301	301	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+470	616	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+
+>Feature ref|YP_001033728.1|
+1	656	Protein
+			product	DNA mismatch repair protein
+			function	DNA mismatch repair enzyme (predicted ATPase)
+3	641	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+24	>109	Region
+			region_name	HATPase_c
+			note	Histidine kinase-like ATPases; This family includes several ATP-binding proteins for example: histidine kinase, DNA gyrase B, topoisomerases, heat shock protein HSP90, phytochrome-like ATPases and DNA mismatch repair proteins
+			db_xref	CDD:238030
+30	30	Site
+34	34
+37	37
+57	57
+59	59
+61	61
+63	64
+97	100
+			order
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238030
+34	34	Site
+			site_type	nitrosylation
+			note	Mg2+ binding site [ion binding]
+			db_xref	CDD:238030
+61	61	Site
+63	63
+97	97
+99	99
+			order
+			site_type	nitrosylation
+			note	G-X-G motif
+			db_xref	CDD:238030
+205	326	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+452	598	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+1	656	Protein
+			product	DNA mismatch repair protein MutL
+			function	DNA mismatch repair enzyme (predicted ATPase)
+
+>Feature ref|YP_001271131.1|
+1	668	Protein
+			product	DNA mismatch repair protein
+3	652	Region
+			region_name	mutL
+			note	DNA mismatch repair protein; Reviewed
+			db_xref	CDD:234630
+205	324	Region
+			region_name	MutL_Trans
+			note	MutL_Trans: transducer domain, having a ribosomal S5 domain 2-like fold, conserved in the C-terminal domain of DNA mismatch repair (MutL/MLH1/PMS2) family. This transducer domain is homologous to the second domain of the DNA gyrase B subunit, which is ...
+			db_xref	CDD:238405
+303	303	Site
+			site_type	nitrosylation
+			note	ATP binding site [chemical binding]
+			db_xref	CDD:238405
+463	609	Region
+			region_name	MutL_C
+			note	MutL C terminal dimerisation domain
+			db_xref	CDD:219965
+

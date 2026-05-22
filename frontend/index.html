@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HoriGene | Bioclues Horizontal Gene Transfer Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1120;--ink-soft:#1e2d47;--sea:#0a3d62;--sea-mid:#1565c0;--cyan:#00bcd4;--bio:#00e5a0;--bio-dim:#00c97e;--warn:#ff6b35;--absent:#e53935;--present:#00c97e;--paper:#f0f4f8;--glass:rgba(255,255,255,0.06);--glass-b:rgba(255,255,255,0.12);--border:rgba(0,229,160,0.18);--border-s:rgba(0,229,160,0.35);--ff-head:'DM Serif Display',serif;--ff-body:'Outfit',sans-serif;--ff-mono:'JetBrains Mono',monospace;--r:8px;--r-lg:16px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-body);background:var(--ink);color:#e8f0f8;min-height:100vh;overflow-x:hidden;}
+#dna-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.35;}
+.page{position:relative;z-index:1;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:58px;background:rgba(11,17,32,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+.topbar-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-text .name{font-family:var(--ff-head);font-size:20px;color:var(--bio);letter-spacing:.02em;}
+.logo-text .sub{font-size:9px;font-family:var(--ff-mono);color:rgba(0,229,160,.55);letter-spacing:.12em;text-transform:uppercase;margin-top:2px;}
+.topbar-nav{display:flex;gap:4px;align-items:center;}
+.nav-btn{padding:6px 14px;border-radius:var(--r);border:none;background:transparent;color:rgba(232,240,248,.65);font-family:var(--ff-body);font-size:13px;cursor:pointer;transition:all .2s;}
+.nav-btn:hover,.nav-btn.active{background:var(--glass);color:var(--bio);}
+.bioclues-badge{display:flex;align-items:center;gap:8px;padding:5px 12px;border-radius:99px;border:1px solid var(--border);background:var(--glass);font-size:11px;color:rgba(232,240,248,.6);text-decoration:none;transition:all .25s;font-family:var(--ff-mono);}
+.bioclues-badge:hover{border-color:var(--bio);color:var(--bio);}
+.bioclues-dot{width:6px;height:6px;border-radius:50%;background:var(--bio);animation:pulse-dot 2s infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 40px;}
+.hero-eyebrow{font-family:var(--ff-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bio);margin-bottom:20px;opacity:0;animation:fadeUp .7s .2s forwards;}
+.hero-title{font-family:var(--ff-head);font-size:clamp(42px,7vw,88px);line-height:1.05;color:#fff;margin-bottom:10px;opacity:0;animation:fadeUp .7s .35s forwards;}
+.hero-title em{font-style:italic;color:var(--bio);}
+.hero-subtitle{font-size:clamp(14px,2vw,18px);color:rgba(232,240,248,.55);max-width:580px;line-height:1.65;margin-bottom:48px;opacity:0;animation:fadeUp .7s .5s forwards;}
+.search-wrap{width:100%;max-width:680px;opacity:0;animation:fadeUp .7s .65s forwards;}
+.search-type-tabs{display:flex;gap:6px;margin-bottom:10px;justify-content:center;}
+.type-tab{padding:5px 14px;border-radius:99px;border:1px solid var(--border);background:transparent;color:rgba(232,240,248,.5);font-family:var(--ff-mono);font-size:11px;cursor:pointer;transition:all .2s;letter-spacing:.08em;}
+.type-tab.active{background:var(--bio);border-color:var(--bio);color:var(--ink);font-weight:500;}
+.search-box{display:flex;align-items:center;background:rgba(255,255,255,.05);border:1.5px solid var(--border-s);border-radius:var(--r-lg);padding:4px 4px 4px 20px;gap:10px;transition:border-color .25s,box-shadow .25s;}
+.search-box:focus-within{border-color:var(--bio);box-shadow:0 0 0 3px rgba(0,229,160,.12),0 8px 32px rgba(0,0,0,.3);}
+.search-icon{color:var(--bio);font-size:18px;flex-shrink:0;}
+#search-input{flex:1;background:none;border:none;outline:none;color:#fff;font-family:var(--ff-mono);font-size:15px;padding:12px 0;}
+#search-input::placeholder{color:rgba(232,240,248,.28);}
+.search-btn{padding:12px 24px;border-radius:10px;border:none;background:var(--bio);color:var(--ink);font-family:var(--ff-body);font-weight:600;font-size:14px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.search-btn:hover{background:var(--bio-dim);transform:translateY(-1px);}
+.search-hint{margin-top:10px;font-size:11px;color:rgba(232,240,248,.3);font-family:var(--ff-mono);}
+.stats-strip{display:flex;gap:1px;max-width:680px;width:100%;margin-top:40px;opacity:0;animation:fadeUp .7s .8s forwards;}
+.stat-pill{flex:1;background:var(--glass);border:1px solid var(--border);border-radius:var(--r);padding:12px 10px;text-align:center;}
+.stat-pill .num{font-family:var(--ff-mono);font-size:22px;color:var(--bio);}
+.stat-pill .lbl{font-size:10px;color:rgba(232,240,248,.4);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+.section{max-width:1000px;margin:0 auto;padding:40px 24px;}
+.section-title{font-family:var(--ff-head);font-size:28px;color:#fff;margin-bottom:6px;}
+.section-sub{font-size:13px;color:rgba(232,240,248,.45);margin-bottom:28px;font-family:var(--ff-mono);}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--bio);border-radius:50%;animation:spin .8s linear infinite;margin:40px auto;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none!important;}
+.results-grid{display:grid;gap:12px;}
+.result-card{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 24px;cursor:pointer;transition:all .25s;display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;}
+.result-card:hover{border-color:var(--bio);background:rgba(0,229,160,.05);transform:translateX(4px);}
+.family-badge{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;flex-shrink:0;}
+.fam-gki{background:rgba(0,188,212,.15);color:#00bcd4;border:1px solid rgba(0,188,212,.3);}
+.fam-mutl{background:rgba(156,39,176,.15);color:#ce93d8;border:1px solid rgba(156,39,176,.3);}
+.fam-muts{background:rgba(0,229,160,.12);color:var(--bio);border:1px solid var(--border);}
+.fam-recp{background:rgba(255,107,53,.15);color:#ff8a65;border:1px solid rgba(255,107,53,.3);}
+.fam-xpt{background:rgba(255,193,7,.15);color:#ffd54f;border:1px solid rgba(255,193,7,.3);}
+.fam-unknown{background:var(--glass);color:rgba(232,240,248,.4);border:1px solid var(--border);}
+.card-main{overflow:hidden;}
+.card-accession{font-family:var(--ff-mono);font-size:15px;color:#fff;margin-bottom:3px;}
+.card-product{font-size:13px;color:rgba(232,240,248,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card-meta{display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0;}
+.meta-chip{font-family:var(--ff-mono);font-size:10px;padding:3px 8px;border-radius:99px;background:var(--glass);border:1px solid var(--border);color:rgba(232,240,248,.5);white-space:nowrap;}
+.arrow-icon{color:rgba(232,240,248,.2);font-size:22px;transition:all .2s;}
+.result-card:hover .arrow-icon{color:var(--bio);transform:translateX(4px);}
+.detail-overlay{position:fixed;inset:0;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s;}
+.detail-overlay.open{opacity:1;pointer-events:all;}
+.detail-panel{background:var(--ink-soft);border:1px solid var(--border-s);border-radius:20px;width:100%;max-width:860px;max-height:90vh;overflow-y:auto;transform:translateY(20px);transition:transform .3s;position:relative;}
+.detail-overlay.open .detail-panel{transform:translateY(0);}
+.detail-header{padding:28px 32px 20px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px;}
+.detail-close{position:absolute;top:20px;right:20px;width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--glass);color:rgba(232,240,248,.6);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.detail-close:hover{border-color:var(--warn);color:var(--warn);}
+.detail-body{padding:24px 32px;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.info-box{background:var(--glass);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;}
+.info-label{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,240,248,.35);margin-bottom:5px;}
+.info-value{font-size:14px;color:#e8f0f8;word-break:break-all;}
+.info-value.mono{font-family:var(--ff-mono);font-size:13px;}
+.info-value.bio{color:var(--bio);}
+.domain-track{background:rgba(0,0,0,.3);border-radius:var(--r);padding:20px;margin-bottom:20px;border:1px solid var(--border);}
+.track-title{font-family:var(--ff-mono);font-size:11px;color:rgba(232,240,248,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+.track-bar-wrap{position:relative;height:28px;background:rgba(255,255,255,.04);border-radius:4px;margin-bottom:10px;overflow:visible;}
+.track-segment{position:absolute;top:3px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-mono);font-size:9px;font-weight:500;overflow:hidden;white-space:nowrap;cursor:default;transition:opacity .2s;}
+.track-segment:hover{opacity:.85;}
+.sites-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.site-chip{padding:4px 10px;border-radius:99px;background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.25);font-family:var(--ff-mono);font-size:11px;color:#ff8a65;}
+.strain-table{width:100%;border-collapse:collapse;font-size:12px;}
+.strain-table th{font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(232,240,248,.35);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);}
+.strain-table td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--ff-mono);font-size:12px;}
+.strain-table tr:last-child td{border-bottom:none;}
+.strain-table tr:hover td{background:var(--glass);}
+.pill-present{display:inline-block;padding:2px 10px;border-radius:99px;background:rgba(0,229,160,.12);border:1px solid rgba(0,229,160,.3);color:var(--bio);font-size:10px;}
+.pill-absent{display:inline-block;padding:2px 10px;border-radius:99px;background:rgba(229,57,53,.12);border:1px solid rgba(229,57,53,.3);color:#ef9a9a;font-size:10px;}
+.refresh-bar{position:fixed;bottom:28px;right:28px;z-index:90;display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
+.refresh-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:99px;border:1.5px solid var(--border-s);background:var(--ink-soft);color:rgba(232,240,248,.7);font-family:var(--ff-mono);font-size:12px;cursor:pointer;transition:all .25s;backdrop-filter:blur(8px);}
+.refresh-btn:hover{border-color:var(--bio);color:var(--bio);}
+.refresh-btn.has-updates{border-color:var(--bio);color:var(--bio);animation:glow-pulse 2s infinite;}
+@keyframes glow-pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,229,160,.3)}50%{box-shadow:0 0 0 8px rgba(0,229,160,0)}}
+.refresh-toast{background:var(--ink-soft);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 18px;font-size:12px;font-family:var(--ff-mono);max-width:300px;line-height:1.6;color:rgba(232,240,248,.7);}
+.refresh-toast .toast-title{color:var(--bio);font-size:13px;margin-bottom:6px;}
+.refresh-toast .toast-row{display:flex;justify-content:space-between;gap:16px;}
+.refresh-toast .toast-val{color:#fff;}
+.about-section{background:rgba(255,255,255,.025);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 24px;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.about-col h2{font-family:var(--ff-head);font-size:32px;color:#fff;margin-bottom:14px;}
+.about-col p{font-size:14px;line-height:1.75;color:rgba(232,240,248,.55);margin-bottom:16px;}
+.about-link{display:inline-flex;align-items:center;gap:6px;color:var(--bio);text-decoration:none;font-family:var(--ff-mono);font-size:12px;letter-spacing:.05em;transition:gap .2s;}
+.about-link:hover{gap:10px;}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.team-card{background:var(--glass);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;}
+.team-name{font-size:13px;color:#e8f0f8;margin-bottom:2px;}
+.team-role{font-family:var(--ff-mono);font-size:10px;color:var(--bio);letter-spacing:.05em;}
+.events-section{max-width:1000px;margin:0 auto;padding:60px 24px;}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px;}
+.event-card{background:var(--glass);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;transition:all .25s;text-decoration:none;display:block;}
+.event-card:hover{border-color:var(--bio);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.3);}
+.event-tag{display:inline-block;padding:3px 10px;border-radius:99px;font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;}
+.tag-conf{background:rgba(0,229,160,.12);border:1px solid rgba(0,229,160,.25);color:var(--bio);}
+.tag-work{background:rgba(0,188,212,.12);border:1px solid rgba(0,188,212,.25);color:var(--cyan);}
+.tag-prog{background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.25);color:var(--warn);}
+.event-title{font-family:var(--ff-head);font-size:18px;color:#fff;margin-bottom:8px;line-height:1.2;}
+.event-desc{font-size:13px;color:rgba(232,240,248,.5);line-height:1.6;margin-bottom:14px;}
+.event-date{font-family:var(--ff-mono);font-size:11px;color:rgba(232,240,248,.3);}
+footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
+.footer-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-size:12px;color:rgba(232,240,248,.25);font-family:var(--ff-mono);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:rgba(232,240,248,.35);text-decoration:none;font-family:var(--ff-mono);transition:color .2s;}
+.footer-links a:hover{color:var(--bio);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border-s);border-radius:3px;}
+::-webkit-scrollbar-thumb:hover{background:var(--bio);}
+@media(max-width:700px){.about-inner{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.topbar-nav{display:none}.card-meta{display:none}.team-grid{grid-template-columns:1fr}}
+.empty-state{text-align:center;padding:60px 20px;color:rgba(232,240,248,.3);}
+.empty-state p{font-size:14px;font-family:var(--ff-mono);}
+.ml-wrap{overflow-x:auto;}
+.ml-table{width:100%;border-collapse:collapse;font-size:11px;font-family:var(--ff-mono);}
+.ml-table th{color:rgba(232,240,248,.35);padding:6px 10px;text-align:left;border-bottom:1px solid var(--border);}
+.ml-table td{padding:6px 10px;border-bottom:1px solid rgba(255,255,255,.03);}
+.ml-table tr:hover td{background:var(--glass);}
+.error-bar{display:inline-block;height:6px;border-radius:3px;vertical-align:middle;margin-right:6px;}
+</style>
+</head>
+<body>
+<canvas id="dna-canvas"></canvas>
+<div class="page">
+
+<header class="topbar">
+  <a class="topbar-logo" href="#">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <path d="M9 4 C9 4 27 10 27 18 C27 26 9 32 9 32" stroke="#00e5a0" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M27 4 C27 4 9 10 9 18 C9 26 27 32 27 32" stroke="#00bcd4" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <line x1="11" y1="9" x2="25" y2="12" stroke="#00e5a0" stroke-width="1.2" opacity="0.6"/>
+      <line x1="10" y1="18" x2="26" y2="18" stroke="#00e5a0" stroke-width="1.2" opacity="0.6"/>
+      <line x1="11" y1="27" x2="25" y2="24" stroke="#00e5a0" stroke-width="1.2" opacity="0.6"/>
+    </svg>
+    <div class="logo-text">
+      <span class="name">HoriGene</span>
+      <span class="sub">Bioclues &middot; HGT Portal</span>
+    </div>
+  </a>
+  <nav class="topbar-nav">
+    <button class="nav-btn active" onclick="showView('search')">Search</button>
+    <button class="nav-btn" onclick="showView('strains')">Strain Matrix</button>
+    <button class="nav-btn" onclick="showView('about')">About</button>
+    <button class="nav-btn" onclick="showView('events')">Events</button>
+  </nav>
+  <a class="bioclues-badge" href="https://bioclues.org" target="_blank" rel="noopener">
+    <span class="bioclues-dot"></span>bioclues.org
+  </a>
+</header>
+
+<!-- SEARCH VIEW -->
+<div id="view-search">
+  <section class="hero">
+    <p class="hero-eyebrow">BIOinformatics CLUb for Experimenting Scientists &middot; Bioclues Collaboration</p>
+    <h1 class="hero-title">Horizontal Gene<br><em>Transfer</em> Explorer</h1>
+    <p class="hero-subtitle">Search and explore mismatch repair proteins (MutS, MutL, RecP, GKI, XPT) across <em>Streptococcus</em> and <em>Lactobacillus</em> genomes with AI-powered pathogenicity prediction.</p>
+    <div class="search-wrap">
+      <div class="search-type-tabs">
+        <button class="type-tab active" data-type="keyword" onclick="setType(this,'keyword')">Keyword</button>
+        <button class="type-tab" data-type="accession" onclick="setType(this,'accession')">Accession ID</button>
+        <button class="type-tab" data-type="family" onclick="setType(this,'family')">Gene Family</button>
+      </div>
+      <div class="search-box">
+        <span class="search-icon">&#9678;</span>
+        <input id="search-input" type="text" placeholder="e.g. MutS, NP_270064.1, glucose kinase&hellip;" autocomplete="off" onkeydown="if(event.key==='Enter')doSearch()">
+        <button class="search-btn" onclick="doSearch()">Search &rarr;</button>
+      </div>
+      <p class="search-hint">Try: <span style="color:rgba(0,229,160,.6);cursor:pointer" onclick="quickSearch('muts','family')">MutS family</span> &middot; <span style="color:rgba(0,229,160,.6);cursor:pointer" onclick="quickSearch('NP_270064.1','accession')">NP_270064.1</span> &middot; <span style="color:rgba(0,229,160,.6);cursor:pointer" onclick="quickSearch('glucose kinase','keyword')">glucose kinase</span></p>
+    </div>
+    <div class="stats-strip">
+      <div class="stat-pill"><div class="num" id="stat-proteins">&#8212;</div><div class="lbl">Proteins</div></div>
+      <div class="stat-pill"><div class="num" id="stat-domains">&#8212;</div><div class="lbl">Domains</div></div>
+      <div class="stat-pill"><div class="num" id="stat-sites">&#8212;</div><div class="lbl">Active Sites</div></div>
+      <div class="stat-pill"><div class="num" id="stat-strains">&#8212;</div><div class="lbl">Strains</div></div>
+      <div class="stat-pill"><div class="num" id="stat-families">&#8212;</div><div class="lbl">Gene Families</div></div>
+    </div>
+  </section>
+  <div class="section" id="results-section" style="display:none">
+    <h2 class="section-title" id="results-title">Results</h2>
+    <p class="section-sub" id="results-sub"></p>
+    <div id="spinner" class="spinner hidden"></div>
+    <div id="results-grid" class="results-grid"></div>
+    <div id="empty-state" class="empty-state hidden"><p>No proteins found for this query.</p></div>
+  </div>
+</div>
+
+<!-- STRAIN MATRIX VIEW -->
+<div id="view-strains" class="hidden">
+  <div class="section">
+    <h2 class="section-title">Strain Presence / Absence Matrix</h2>
+    <p class="section-sub">Gene distribution across Streptococcus and Lactobacillus strains</p>
+    <div id="strain-spinner" class="spinner"></div>
+    <div id="strain-table-wrap" class="hidden"></div>
+  </div>
+</div>
+
+<!-- ABOUT VIEW -->
+<div id="view-about" class="hidden">
+  <div class="about-section">
+    <div class="about-inner">
+      <div class="about-col">
+        <h2>About HoriGene</h2>
+        <p>HoriGene is a bioinformatics web server developed under the <strong style="color:#e8f0f8">Bioclues</strong> research consortium, focusing on Horizontal Gene Transfer (HGT) in bacterial pathogens.</p>
+        <p>Using an AI/ML model based on unsupervised learning on human fungal pathogenesis datasets, HoriGene discovers classification features that predict correlations between pathogenesis and horizontal transfer events.</p>
+        <p>The portal studies five key gene families &mdash; MutS, MutL, RecP, GKI, and XPT &mdash; across <em>Streptococcus pyogenes</em> and <em>Lactobacillus</em> strains, revealing patterns of gene presence, absence, and horizontal acquisition.</p>
+        <a class="about-link" href="https://bioclues.org/horigene/" target="_blank">Read more on Bioclues &rarr;</a>
+      </div>
+      <div class="about-col">
+        <h2>The Team</h2>
+        <div class="team-grid">
+          <div class="team-card"><div class="team-name">Prashanth N Suravajhala</div><div class="team-role">Principal Investigator</div></div>
+          <div class="team-card"><div class="team-name">VS Sundararajan</div><div class="team-role">Principal Investigator</div></div>
+          <div class="team-card"><div class="team-name">Gautam Dhandh</div><div class="team-role">Contributor</div></div>
+          <div class="team-card"><div class="team-name">Girik Malik</div><div class="team-role">Contributor</div></div>
+          <div class="team-card"><div class="team-name">Akshay Zawar</div><div class="team-role">Contributor</div></div>
+          <div class="team-card" style="border-color:rgba(0,229,160,.3)"><div class="team-name" style="color:var(--bio)">Bioclues Society</div><div class="team-role">14,600+ Members &middot; 43 Countries</div></div>
+        </div>
+        <br>
+        <p style="font-size:13px;color:rgba(232,240,248,.4)">Founded in 2005, Bioclues is India's largest bioinformatics society. <strong style="color:rgba(232,240,248,.6)">BIOinformatics CLUb for Experimenting Scientists.</strong></p>
+        <a class="about-link" href="https://bioclues.org/who-we-are/" target="_blank">Meet the full team &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <h2 class="section-title">ML Algorithm Benchmarks</h2>
+    <p class="section-sub">Relative error % across prediction features &mdash; lower is better</p>
+    <div id="ml-table-wrap" class="ml-wrap"><div class="spinner"></div></div>
+  </div>
+</div>
+
+<!-- EVENTS VIEW -->
+<div id="view-events" class="hidden">
+  <div class="events-section">
+    <p class="hero-eyebrow" style="opacity:1;margin-bottom:12px">Bioclues Events</p>
+    <h2 class="section-title">Conferences &amp; Programs</h2>
+    <p class="section-sub">In collaboration with Bioclues &middot; <a href="https://bioclues.org/events/" target="_blank" style="color:var(--bio);text-decoration:none">bioclues.org/events</a></p>
+    <div class="events-grid">
+      <a class="event-card" href="https://bioclues.org/events/inbix/" target="_blank"><span class="event-tag tag-conf">Conference</span><div class="event-title">INBIX 2026</div><div class="event-desc">The Indian Conference on Bioinformatics. India's premier annual bioinformatics conference bridging genomic science with community health.</div><div class="event-date">Upcoming &middot; 2026</div></a>
+      <a class="event-card" href="https://bioclues.org/sanbix/" target="_blank"><span class="event-tag tag-conf">Conference</span><div class="event-title">SANBIX</div><div class="event-desc">South Asian Network Bioinformatics Exchange &mdash; bringing together researchers from South Asia and beyond.</div><div class="event-date">bioclues.org/sanbix</div></a>
+      <a class="event-card" href="https://bioclues.org/gbes2026/" target="_blank"><span class="event-tag tag-work">Workshop</span><div class="event-title">GBES 2026</div><div class="event-desc">Genome Biology and Evolutionary Systems. Hands-on workshop series for computational biologists.</div><div class="event-date">2026</div></a>
+      <a class="event-card" href="https://bioclues.org/in-sciversation/" target="_blank"><span class="event-tag tag-prog">Perpetual</span><div class="event-title">In Sciversation</div><div class="event-desc">Ongoing science conversation series &mdash; journal clubs, webinars, and mentoring sessions connecting researchers worldwide.</div><div class="event-date">Perpetual &middot; Ongoing</div></a>
+      <a class="event-card" href="https://bioclues.org/bixs/" target="_blank"><span class="event-tag tag-prog">Outreach</span><div class="event-title">BIXS &mdash; Bioinformatics for Children</div><div class="event-desc">Teaching bioinformatics to school children. New cohort starting soon. Bridging the gap between young minds and computational biology.</div><div class="event-date">New cohort starting soon</div></a>
+      <a class="event-card" href="https://bioclues.org/women-in-biology/" target="_blank"><span class="event-tag tag-prog">Forum</span><div class="event-title">Women in Biology (WiB)</div><div class="event-desc">Mentorship and support for women in computational biology and bioinformatics.</div><div class="event-date">Ongoing</div></a>
+      <div class="event-card" style="cursor:default"><span class="event-tag tag-conf">Past</span><div class="event-title">#INBIX2025</div><div class="event-desc">Theme: "Action Towards Genomics and Community Health (ATGC)". Held November 13&ndash;15, 2025.</div><div class="event-date">Nov 13&ndash;15, 2025</div></div>
+      <a class="event-card" href="https://www.youtube.com/biocluesin" target="_blank"><span class="event-tag tag-work">Resources</span><div class="event-title">Bioclues YouTube</div><div class="event-desc">All conference recordings, LanBix2022 video abstracts, workshop recordings, and webinar archives free to access.</div><div class="event-date">youtube.com/biocluesin</div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 HoriGene &middot; A Bioclues Research Web Server &middot; BIOinformatics CLUb for Experimenting Scientists</span>
+    <div class="footer-links">
+      <a href="https://bioclues.org" target="_blank">bioclues.org</a>
+      <a href="https://bioclues.org/horigene/" target="_blank">HoriGene</a>
+      <a href="https://bioclues.org/events/" target="_blank">Events</a>
+      <a href="https://bioclues.org/join-us/" target="_blank">Join Bioclues</a>
+      <a href="https://www.youtube.com/biocluesin" target="_blank">YouTube</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- PROTEIN DETAIL OVERLAY -->
+<div class="detail-overlay" id="detail-overlay" onclick="closeDetail(event)">
+  <div class="detail-panel" id="detail-panel">
+    <button class="detail-close" onclick="closeDetailBtn()">&#x2715;</button>
+    <div class="detail-header" id="detail-header"></div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+</div>
+
+<!-- DATA REFRESH CORNER -->
+<div class="refresh-bar">
+  <div id="refresh-toast" class="refresh-toast hidden"></div>
+  <button class="refresh-btn hidden" id="refresh-btn" onclick="refreshData()" style="background:rgba(0,229,160,.1);border-color:var(--bio);color:var(--bio)">&#x21BB; Refresh Data</button>
+  <button class="refresh-btn" id="check-btn" onclick="checkData()"><span>&#x27F3;</span> Check for Updates</button>
+</div>
+
+<script>
+// ── DNA HELIX ANIMATION ───────────────────────────────────────────────────
+(function(){
+  var canvas=document.getElementById('dna-canvas'),ctx=canvas.getContext('2d'),t=0,W,H;
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  window.addEventListener('resize',resize);resize();
+  function draw(){
+    ctx.clearRect(0,0,W,H);t+=0.008;
+    var strands=3;
+    for(var s=0;s<strands;s++){
+      var xBase=(s+0.5)*(W/strands),amp=55+s*12,freq=0.018+s*0.003,phase=s*1.8;
+      for(var strand=0;strand<2;strand++){
+        var phOff=strand*Math.PI;
+        ctx.beginPath();
+        for(var y=-20;y<H+20;y+=3){
+          var x=xBase+Math.sin(y*freq+t+phase+phOff)*amp;
+          y===-20?ctx.moveTo(x,y):ctx.lineTo(x,y);
+        }
+        var g=ctx.createLinearGradient(0,0,0,H);
+        var c=strand===0?'0,229,160':'0,188,212';
+        g.addColorStop(0,'rgba('+c+',0)');g.addColorStop(0.3,'rgba('+c+',.45)');
+        g.addColorStop(0.7,'rgba('+c+',.45)');g.addColorStop(1,'rgba('+c+',0)');
+        ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.stroke();
+      }
+      var rungs=20;
+      for(var i=0;i<rungs;i++){
+        var ry=(i/rungs)*H+(t*18)%(H/rungs);
+        if(ry<0||ry>H)continue;
+        var x1=xBase+Math.sin(ry*freq+t+phase)*amp;
+        var x2=xBase+Math.sin(ry*freq+t+phase+Math.PI)*amp;
+        var al=0.12+0.22*Math.abs(Math.sin(ry*freq+t+phase));
+        ctx.beginPath();ctx.moveTo(x1,ry);ctx.lineTo(x2,ry);
+        ctx.strokeStyle='rgba(0,229,160,'+al+')';ctx.lineWidth=1;ctx.stroke();
+        [x1,x2].forEach(function(x){ctx.beginPath();ctx.arc(x,ry,2,0,Math.PI*2);ctx.fillStyle='rgba(0,229,160,'+(al*1.4)+')';ctx.fill();});
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── APP ───────────────────────────────────────────────────────────────────
+var API='http://localhost:5000';
+var currentType='keyword';
+
+function showView(view){
+  ['search','strains','about','events'].forEach(function(v){
+    document.getElementById('view-'+v).classList.toggle('hidden',v!==view);
+  });
+  document.querySelectorAll('.nav-btn').forEach(function(b,i){
+    b.classList.toggle('active',['search','strains','about','events'][i]===view);
+  });
+  if(view==='strains')loadStrains();
+  if(view==='about')loadML();
+}
+
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/data/status');
+    var d=await r.json();
+    document.getElementById('stat-proteins').textContent=d.proteins??'0';
+    document.getElementById('stat-domains').textContent=d.domains??'0';
+    document.getElementById('stat-sites').textContent=d.sites??'0';
+    document.getElementById('stat-strains').textContent=d.strains??'0';
+    document.getElementById('stat-families').textContent=d.gene_families?d.gene_families.length:'0';
+  }catch(e){console.warn('Backend not reachable');}
+}
+loadStats();
+
+function setType(el,type){
+  currentType=type;
+  document.querySelectorAll('.type-tab').forEach(function(t){t.classList.remove('active');});
+  el.classList.add('active');
+  var hints={keyword:'e.g. glucose kinase, mismatch repair\u2026',accession:'e.g. NP_270064.1, AAK34323.1\u2026',family:'gki \u00b7 mutl \u00b7 muts \u00b7 recp \u00b7 xpt'};
+  document.getElementById('search-input').placeholder=hints[type]||'';
+}
+
+function quickSearch(q,type){
+  document.getElementById('search-input').value=q;
+  document.querySelectorAll('.type-tab').forEach(function(t){if(t.dataset.type===type)t.click();});
+  doSearch();
+}
+
+async function doSearch(){
+  var q=document.getElementById('search-input').value.trim();
+  if(!q)return;
+  var sec=document.getElementById('results-section'),grid=document.getElementById('results-grid');
+  var spin=document.getElementById('spinner'),empty=document.getElementById('empty-state');
+  var titleEl=document.getElementById('results-title'),subEl=document.getElementById('results-sub');
+  sec.style.display='block';spin.classList.remove('hidden');
+  grid.innerHTML='';empty.classList.add('hidden');
+  titleEl.textContent='Searching\u2026';subEl.textContent='';
+  try{
+    var r=await fetch(API+'/api/search?q='+encodeURIComponent(q)+'&type='+currentType+'&limit=30');
+    var d=await r.json();
+    spin.classList.add('hidden');
+    titleEl.textContent='Results for "'+q+'"';
+    subEl.textContent=d.total+' protein'+(d.total!==1?'s':'')+' found \u00b7 '+currentType+' search';
+    if(!d.results||d.results.length===0){empty.classList.remove('hidden');return;}
+    grid.innerHTML=d.results.map(function(p){
+      return '<div class="result-card" onclick="openDetail(\''+p.accession.replace(/'/g,"\\'")+'\')">'
+        +'<div class="family-badge fam-'+(p.gene_family||'unknown')+'">'+(p.gene_family||'?').toUpperCase()+'</div>'
+        +'<div class="card-main"><div class="card-accession">'+p.accession+'</div>'
+        +'<div class="card-product">'+(p.product||'Protein \u2014 no annotation')+'</div></div>'
+        +'<div class="card-meta">'
+        +(p.ec_number?'<span class="meta-chip">EC '+p.ec_number+'</span>':'')
+        +(p.domain_count?'<span class="meta-chip">'+p.domain_count+' domain'+(p.domain_count>1?'s':'')+'</span>':'')
+        +(p.length?'<span class="meta-chip">'+p.length+' aa</span>':'')
+        +'</div><span class="arrow-icon">\u203a</span></div>';
+    }).join('');
+  }catch(e){
+    spin.classList.add('hidden');
+    titleEl.textContent='Backend not reachable';
+    subEl.textContent='Make sure Flask is running on localhost:5000';
+  }
+}
+
+async function openDetail(accession){
+  var overlay=document.getElementById('detail-overlay');
+  var header=document.getElementById('detail-header'),body=document.getElementById('detail-body');
+  header.innerHTML='<div class="spinner" style="margin:0 auto"></div>';
+  body.innerHTML='';overlay.classList.add('open');document.body.style.overflow='hidden';
+  try{
+    var r=await fetch(API+'/api/protein/'+encodeURIComponent(accession));
+    var d=await r.json();var p=d.protein;
+    header.innerHTML='<div class="family-badge fam-'+p.gene_family+'" style="width:64px;height:64px;font-size:13px">'+p.gene_family.toUpperCase()+'</div>'
+      +'<div><div style="font-family:var(--ff-mono);font-size:20px;color:#fff;margin-bottom:4px">'+p.accession+'</div>'
+      +'<div style="font-size:15px;color:rgba(232,240,248,.6)">'+(p.product||'No product annotation')+'</div>'
+      +(p.ec_number?'<div style="margin-top:6px"><span class="meta-chip">EC '+p.ec_number+'</span></div>':'')+'</div>';
+    var infoHtml='<div class="detail-grid">'
+      +'<div class="info-box"><div class="info-label">Accession</div><div class="info-value mono bio">'+p.accession+'</div></div>'
+      +'<div class="info-box"><div class="info-label">Gene Family</div><div class="info-value">'+p.gene_family.toUpperCase()+'</div></div>'
+      +'<div class="info-box"><div class="info-label">Product</div><div class="info-value">'+(p.product||'\u2014')+'</div></div>'
+      +'<div class="info-box"><div class="info-label">Length</div><div class="info-value mono">'+(p.length?p.length+' aa':'\u2014')+'</div></div>'
+      +'<div class="info-box"><div class="info-label">EC Number</div><div class="info-value mono">'+(p.ec_number||'\u2014')+'</div></div>'
+      +'<div class="info-box"><div class="info-label">Source</div><div class="info-value" style="font-size:11px">'+(p.source_file||'\u2014')+'</div></div>'
+      +'</div>';
+    if(d.domains&&d.domains.length>0){
+      var len=p.length||400;
+      var cols=['#00bcd4','#ce93d8','#00e5a0','#ff8a65','#ffd54f','#80cbc4'];
+      var segs=d.domains.map(function(dom,i){
+        var s=dom.start_pos||0,e=dom.end_pos||len;
+        var left=((s/len)*100).toFixed(1),width=Math.max(2,((e-s)/len*100)).toFixed(1);
+        var col=cols[i%cols.length];
+        var name=(dom.region_name||dom.db_xref||'Region').substring(0,16);
+        return '<div class="track-segment" style="left:'+left+'%;width:'+width+'%;background:'+col+'22;border:1px solid '+col+'66;color:'+col+'" title="'+(dom.region_name||'')+' ['+(dom.start_pos||0)+'-'+(dom.end_pos||0)+']">'+(width>6?name:'')+'</div>';
+      }).join('');
+      infoHtml+='<div class="domain-track"><div class="track-title">Domain Architecture ('+d.domains.length+' domain'+(d.domains.length>1?'s':'')+')</div>'
+        +'<div class="track-bar-wrap">'+segs+'</div>'
+        +'<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">'+d.domains.map(function(dom,i){
+          var col=cols[i%cols.length];
+          return '<span style="font-size:10px;font-family:var(--ff-mono);color:'+col+'">\u25aa '+(dom.region_name||dom.db_xref||'Region')+' ['+(dom.start_pos||'?')+'\u2013'+(dom.end_pos||'?')+']</span>';
+        }).join('')+'</div></div>';
+    }
+    if(d.sites&&d.sites.length>0){
+      infoHtml+='<div style="margin-bottom:20px"><div class="track-title" style="font-family:var(--ff-mono);font-size:11px;color:rgba(232,240,248,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Active / Binding Sites ('+d.sites.length+')</div>'
+        +'<div class="sites-list">'+d.sites.map(function(s){return '<span class="site-chip" title="'+(s.note||'')+'">'+(s.site_type||'Site')+': '+s.residues+'</span>';}).join('')+'</div></div>';
+    }
+    if(d.strain_presence&&d.strain_presence.length>0){
+      infoHtml+='<div style="margin-bottom:20px"><div class="track-title" style="font-family:var(--ff-mono);font-size:11px;color:rgba(232,240,248,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Strain Distribution ('+d.strain_presence.length+' strains)</div>'
+        +'<div style="max-height:220px;overflow-y:auto"><table class="strain-table"><thead><tr><th>Strain</th><th>Status</th><th>Accession</th></tr></thead><tbody>'
+        +d.strain_presence.map(function(s){return '<tr><td>'+s.strain_name+'</td><td>'+(s.present?'<span class="pill-present">\u2713 Present</span>':'<span class="pill-absent">\u2717 Absent</span>')+'</td><td style="color:rgba(232,240,248,.4)">'+(s.accession||'\u2014')+'</td></tr>';}).join('')
+        +'</tbody></table></div></div>';
+    }
+    body.innerHTML=infoHtml;
+  }catch(e){body.innerHTML='<p style="color:rgba(232,240,248,.4);padding:20px">Could not load protein details. Is Flask running?</p>';}
+}
+
+function closeDetail(e){if(e.target===document.getElementById('detail-overlay'))closeDetailBtn();}
+function closeDetailBtn(){document.getElementById('detail-overlay').classList.remove('open');document.body.style.overflow='';}
+
+async function loadStrains(){
+  var wrap=document.getElementById('strain-table-wrap'),spin=document.getElementById('strain-spinner');
+  if(!wrap.classList.contains('hidden'))return;
+  try{
+    var r=await fetch(API+'/api/strains');var data=await r.json();
+    spin.classList.add('hidden');
+    var families=['gki','mutl','muts','recp','xpt'];
+    var famColors={gki:'#00bcd4',mutl:'#ce93d8',muts:'#00e5a0',recp:'#ff8a65',xpt:'#ffd54f'};
+    var html='<div style="overflow-x:auto"><table class="strain-table"><thead><tr><th>Strain</th>'
+      +families.map(function(f){return '<th style="color:'+famColors[f]+'">'+f.toUpperCase()+'</th>';}).join('')+'</tr></thead><tbody>';
+    data.forEach(function(row){
+      var byFam={};row.genes.forEach(function(g){byFam[g.gene_family]=g;});
+      html+='<tr><td style="font-family:var(--ff-body);white-space:nowrap">'+row.strain+'</td>'
+        +families.map(function(f){var g=byFam[f];if(!g)return '<td><span style="color:rgba(232,240,248,.2);font-size:10px">\u2014</span></td>';return '<td>'+(g.present?'<span class="pill-present">\u2713</span>':'<span class="pill-absent">\u2717</span>')+'</td>';}).join('')+'</tr>';
+    });
+    html+='</tbody></table></div>';
+    wrap.innerHTML=html;wrap.classList.remove('hidden');
+  }catch(e){spin.classList.add('hidden');wrap.innerHTML='<p style="color:rgba(232,240,248,.4);font-family:var(--ff-mono);font-size:13px">Backend not reachable. Start Flask on localhost:5000.</p>';wrap.classList.remove('hidden');}
+}
+
+async function loadML(){
+  var wrap=document.getElementById('ml-table-wrap');
+  if(wrap.querySelector('table'))return;
+  try{
+    var r=await fetch(API+'/api/protein/NP_269602.1');var d2=await r.json();
+    var ml=d2.ml_scores||[];
+    if(!ml.length){wrap.innerHTML='<p style="color:rgba(232,240,248,.3);font-size:13px">No ML data loaded.</p>';return;}
+    var features=[...new Set(ml.map(function(m){return m.feature_name;}))];
+    var algos=[...new Set(ml.map(function(m){return m.algorithm;}))];
+    var html='<table class="ml-table"><thead><tr><th>Feature</th>'+algos.map(function(a){return '<th>'+a+'</th>';}).join('')+'</tr></thead><tbody>';
+    features.forEach(function(feat){
+      html+='<tr><td style="color:#e8f0f8">'+feat+'</td>';
+      algos.forEach(function(algo){
+        var row=ml.find(function(m){return m.feature_name===feat&&m.algorithm===algo;});
+        if(!row){html+='<td>\u2014</td>';return;}
+        var err=row.error_percent,pct=Math.min(err/100*100,100);
+        var col=err<5?'#00e5a0':err<40?'#ffd54f':'#ef9a9a';
+        html+='<td><span class="error-bar" style="width:'+pct+'px;background:'+col+'44;border:1px solid '+col+'66"></span><span style="color:'+col+'">'+err.toFixed(2)+'%</span></td>';
+      });
+      html+='</tr>';
+    });
+    html+='</tbody></table>';wrap.innerHTML=html;
+  }catch(e){wrap.innerHTML='<p style="color:rgba(232,240,248,.3);font-size:13px;font-family:var(--ff-mono)">Start the Flask backend to see ML benchmark data.</p>';}
+}
+
+async function checkData(){
+  var btn=document.getElementById('check-btn'),toast=document.getElementById('refresh-toast'),rfBtn=document.getElementById('refresh-btn');
+  btn.innerHTML='<span style="display:inline-block;animation:spin .8s linear infinite">\u27F3</span> Checking\u2026';
+  try{
+    var r=await fetch(API+'/api/data/check');var d=await r.json();
+    btn.innerHTML='\u27F3 Check for Updates';
+    if(d.has_updates){
+      btn.classList.add('has-updates');rfBtn.classList.remove('hidden');
+      toast.innerHTML='<div class="toast-title">\u2756 Updates found</div><div class="toast-row"><span>New files</span><span class="toast-val">'+(d.new_files?d.new_files.length:0)+'</span></div><div class="toast-row"><span>Changed files</span><span class="toast-val">'+(d.changed_files?d.changed_files.length:0)+'</span></div><div style="margin-top:8px;font-size:10px;opacity:.6">Click Refresh Data to ingest</div>';
+      toast.classList.remove('hidden');
+    }else{
+      btn.classList.remove('has-updates');rfBtn.classList.add('hidden');
+      toast.innerHTML='<div class="toast-title" style="color:rgba(232,240,248,.6)">\u2713 Data is up to date</div><div style="font-size:11px;opacity:.5;margin-top:4px">No new files found</div>';
+      toast.classList.remove('hidden');setTimeout(function(){toast.classList.add('hidden');},3000);
+    }
+  }catch(e){
+    btn.innerHTML='\u27F3 Check for Updates';
+    toast.innerHTML='<div style="color:#ef9a9a">Backend not reachable.<br>Start Flask on localhost:5000</div>';
+    toast.classList.remove('hidden');setTimeout(function(){toast.classList.add('hidden');},4000);
+  }
+}
+
+async function refreshData(){
+  var rfBtn=document.getElementById('refresh-btn'),toast=document.getElementById('refresh-toast');
+  rfBtn.innerHTML='<span style="display:inline-block;animation:spin .8s linear infinite">\u21BB</span> Ingesting\u2026';rfBtn.disabled=true;
+  try{
+    var r=await fetch(API+'/api/data/refresh',{method:'POST'});var d=await r.json();
+    rfBtn.innerHTML='\u21BB Refresh Data';rfBtn.disabled=false;rfBtn.classList.add('hidden');
+    document.getElementById('check-btn').classList.remove('has-updates');
+    toast.innerHTML='<div class="toast-title">\u2756 Data refreshed</div>'
+      +'<div class="toast-row"><span>Files processed</span><span class="toast-val">'+(d.files_processed?d.files_processed.length:0)+'</span></div>'
+      +'<div class="toast-row"><span>Proteins added</span><span class="toast-val">'+(d.proteins_added||0)+'</span></div>'
+      +'<div class="toast-row"><span>Domains added</span><span class="toast-val">'+(d.domains_added||0)+'</span></div>'
+      +(d.errors&&d.errors.length?'<div style="color:#ef9a9a;margin-top:6px;font-size:10px">\u26a0 '+d.errors.length+' error(s)</div>':'');
+    toast.classList.remove('hidden');loadStats();setTimeout(function(){toast.classList.add('hidden');},5000);
+  }catch(e){rfBtn.innerHTML='\u21BB Refresh Data';rfBtn.disabled=false;}
+}
+</script>
+</body>
+</html>

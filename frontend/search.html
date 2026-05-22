@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Proteins — HoriGene</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-helix">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M6 4 C6 4 30 10 30 18 C30 26 6 32 6 32" stroke="#00d4aa" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M30 4 C30 4 6 10 6 18 C6 26 30 32 30 32" stroke="#0077ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="6" cy="4" r="2.5" fill="#00d4aa"/><circle cx="30" cy="4" r="2.5" fill="#0077ff"/>
+          <circle cx="18" cy="18" r="2" fill="#fff" opacity="0.8"/>
+          <circle cx="6" cy="32" r="2.5" fill="#00d4aa"/><circle cx="30" cy="32" r="2.5" fill="#0077ff"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">HoriGene</span>
+        <span class="logo-sub">BioClues Webserver</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link active">Search</a>
+      <a href="strains.html" class="nav-link">Strains</a>
+      <a href="ml.html" class="nav-link">ML Scores</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="search.html" class="nav-cta">Launch Search →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="search-page">
+
+  <!-- Search hero -->
+  <div class="search-hero">
+    <div class="container">
+      <h1 class="search-hero-title">Protein Search</h1>
+      <p>Search across 230 proteins from 5 gene families · <span style="font-family:var(--font-mono);color:var(--teal);font-size:0.9em">Streptococcus & Lactobacillus</span></p>
+      <div class="search-bar-wrap">
+        <select class="search-type-select" id="searchType">
+          <option value="keyword">Keyword</option>
+          <option value="accession">Accession ID</option>
+          <option value="family">Gene Family</option>
+        </select>
+        <input
+          class="search-input" id="searchInput" type="text"
+          placeholder="e.g. MutS, glucose kinase, NP_270064.1 …"
+          autocomplete="off" spellcheck="false"
+        />
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+      <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap">
+        <span style="font-size:0.78rem;color:var(--text-muted)">Quick:</span>
+        <button class="quick-tag" onclick="quickSearch('muts','family')">MutS</button>
+        <button class="quick-tag" onclick="quickSearch('mutl','family')">MutL</button>
+        <button class="quick-tag" onclick="quickSearch('gki','family')">GKI</button>
+        <button class="quick-tag" onclick="quickSearch('recp','family')">RecP</button>
+        <button class="quick-tag" onclick="quickSearch('xpt','family')">XPT</button>
+        <button class="quick-tag" onclick="quickSearch('glucose kinase','keyword')">glucose kinase</button>
+        <button class="quick-tag" onclick="quickSearch('NP_270064.1','accession')">NP_270064.1</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layout -->
+  <div class="container">
+    <div class="search-layout" id="refresh">
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-panel">
+          <div class="sidebar-title">Gene Family</div>
+          <div class="family-filter" id="familyFilter">
+            <button class="fam-btn active" data-family="all" onclick="filterFamily('all')">
+              All Families <span class="fam-count" id="count-all">—</span>
+            </button>
+            <button class="fam-btn" data-family="muts" onclick="filterFamily('muts')">
+              MutS <span class="fam-count" id="count-muts">—</span>
+            </button>
+            <button class="fam-btn" data-family="mutl" onclick="filterFamily('mutl')">
+              MutL <span class="fam-count" id="count-mutl">—</span>
+            </button>
+            <button class="fam-btn" data-family="recp" onclick="filterFamily('recp')">
+              RecP <span class="fam-count" id="count-recp">—</span>
+            </button>
+            <button class="fam-btn" data-family="gki" onclick="filterFamily('gki')">
+              GKI <span class="fam-count" id="count-gki">—</span>
+            </button>
+            <button class="fam-btn" data-family="xpt" onclick="filterFamily('xpt')">
+              XPT <span class="fam-count" id="count-xpt">—</span>
+            </button>
+          </div>
+          <hr class="sidebar-divider"/>
+
+          <!-- Data refresh -->
+          <div class="sidebar-title">Data Sync</div>
+          <div class="refresh-panel">
+            <div class="refresh-status">
+              <span class="status-dot"></span>
+              <span id="dbStatus">Loading status…</span>
+            </div>
+            <button class="refresh-panel-btn check-btn" onclick="checkData()">
+              🔍 Check for Updates
+            </button>
+            <button class="refresh-panel-btn ingest-btn" id="ingestBtn" onclick="refreshData()" disabled>
+              ⚡ Refresh Data
+            </button>
+            <div class="refresh-message" id="refreshMsg"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Results -->
+      <main>
+        <div class="results-meta" id="resultsMeta"></div>
+        <div id="resultsArea">
+          <div class="empty-state">
+            <div class="empty-helix">🧬</div>
+            <div class="empty-title">Start searching above</div>
+            <div class="empty-sub">Try "MutS", "glucose kinase", or an accession like NP_270064.1</div>
+          </div>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </main>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .search-hero-title { font-family: var(--font-display); font-size: 2rem; font-weight: 900; margin-bottom: 0.3rem; }
+  .quick-tag {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    padding: 0.2rem 0.7rem; border-radius: 99px;
+    background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2);
+    color: var(--teal); cursor: pointer; transition: all 0.2s;
+  }
+  .quick-tag:hover { background: rgba(0,212,170,0.2); }
+</style>
+
+<script src="assets/app.js"></script>
+<script>
+  const API = 'http://localhost:5000';
+  let currentPage = 0;
+  let currentQuery = '';
+  let currentType  = 'keyword';
+  let currentFamily = 'all';
+  const LIMIT = 15;
+
+  // ── Load family counts from DB status ────────────────────────────
+  async function loadStatus() {
+    try {
+      const data = await fetch(API + '/api/data/status').then(r => r.json());
+      const dbStatus = document.getElementById('dbStatus');
+      dbStatus.textContent = `${data.proteins} proteins loaded`;
+      data.gene_families.forEach(f => {
+        const el = document.getElementById('count-' + f.family);
+        if (el) el.textContent = f.count;
+      });
+      const allEl = document.getElementById('count-all');
+      if (allEl) allEl.textContent = data.proteins;
+    } catch (e) {
+      document.getElementById('dbStatus').textContent = 'Backend offline';
+    }
+  }
+
+  // ── Search ─────────────────────────────────────────────────────
+  async function doSearch(query, type, page = 0) {
+    currentQuery = query;
+    currentType  = type;
+    currentPage  = page;
+
+    const area = document.getElementById('resultsArea');
+    const meta = document.getElementById('resultsMeta');
+    area.innerHTML = `<div class="loading-state"><div class="loading-dna"></div><p>Searching…</p></div>`;
+    meta.innerHTML = '';
+    document.getElementById('pagination').innerHTML = '';
+
+    try {
+      const url = `${API}/api/search?q=${encodeURIComponent(query)}&type=${type}&limit=${LIMIT}&offset=${page * LIMIT}`;
+      const data = await fetch(url).then(r => r.json());
+      renderResults(data, page);
+    } catch (e) {
+      area.innerHTML = `<div class="empty-state"><div class="empty-helix">⚠️</div>
+        <div class="empty-title">Cannot reach backend</div>
+        <div class="empty-sub">Make sure Flask is running on localhost:5000</div></div>`;
+    }
+  }
+
+  function renderResults(data, page) {
+    const area = document.getElementById('resultsArea');
+    const meta = document.getElementById('resultsMeta');
+
+    if (!data.results || data.results.length === 0) {
+      area.innerHTML = `<div class="empty-state"><div class="empty-helix">🔬</div>
+        <div class="empty-title">No proteins found</div>
+        <div class="empty-sub">Try a different keyword or check the spelling</div></div>`;
+      meta.innerHTML = '';
+      return;
+    }
+
+    meta.innerHTML = `Found <strong>${data.total}</strong> proteins for "<strong>${data.query}</strong>"`;
+
+    area.innerHTML = data.results.map(p => `
+      <a class="protein-card" href="detail.html?acc=${encodeURIComponent(p.accession)}">
+        <span class="protein-family-tag tag-${p.gene_family}">${p.gene_family.toUpperCase()}</span>
+        <div class="protein-info">
+          <div class="protein-acc">${p.accession}</div>
+          <div class="protein-product">${p.product || '<em style="opacity:0.5">No product name</em>'}</div>
+          <div class="protein-chips">
+            ${p.ec_number ? `<span class="chip">EC ${p.ec_number}</span>` : ''}
+            <span class="chip">${p.domain_count} domain${p.domain_count !== 1 ? 's' : ''}</span>
+            <span class="chip">${p.site_count} site${p.site_count !== 1 ? 's' : ''}</span>
+            ${p.length ? `<span class="chip">${p.length} aa</span>` : ''}
+          </div>
+        </div>
+        <span class="protein-arrow">›</span>
+      </a>
+    `).join('');
+
+    // Pagination
+    const total = data.total;
+    const pages = Math.ceil(total / LIMIT);
+    if (pages > 1) {
+      const pag = document.getElementById('pagination');
+      pag.innerHTML = '';
+      const addBtn = (label, p, disabled, active) => {
+        const b = document.createElement('button');
+        b.className = 'page-btn' + (active ? ' active' : '');
+        b.textContent = label;
+        b.disabled = disabled;
+        if (!disabled && !active) b.onclick = () => doSearch(currentQuery, currentType, p);
+        pag.appendChild(b);
+      };
+      addBtn('‹', page - 1, page === 0, false);
+      for (let i = Math.max(0, page - 2); i < Math.min(pages, page + 3); i++) {
+        addBtn(i + 1, i, false, i === page);
+      }
+      addBtn('›', page + 1, page >= pages - 1, false);
+    }
+  }
+
+  // ── Family filter ─────────────────────────────────────────────
+  function filterFamily(fam) {
+    currentFamily = fam;
+    document.querySelectorAll('.fam-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-family="${fam}"]`)?.classList.add('active');
+    if (fam === 'all') {
+      if (currentQuery) doSearch(currentQuery, currentType, 0);
+    } else {
+      doSearch(fam, 'family', 0);
+      document.getElementById('searchInput').value = fam;
+      document.getElementById('searchType').value  = 'family';
+    }
+  }
+
+  // ── Quick search tags ─────────────────────────────────────────
+  function quickSearch(q, type) {
+    document.getElementById('searchInput').value = q;
+    document.getElementById('searchType').value  = type;
+    doSearch(q, type, 0);
+  }
+
+  // ── Data refresh ──────────────────────────────────────────────
+  async function checkData() {
+    const msg = document.getElementById('refreshMsg');
+    const btn = document.getElementById('ingestBtn');
+    msg.textContent = 'Checking data folder…';
+    msg.className   = 'refresh-message';
+    try {
+      const data = await fetch(API + '/api/data/check').then(r => r.json());
+      if (data.has_updates) {
+        const n = data.new_files.length + data.changed_files.length;
+        msg.textContent = `Found ${n} new/changed file${n !== 1 ? 's' : ''}. Click Refresh to ingest.`;
+        msg.className   = 'refresh-message success';
+        btn.disabled    = false;
+      } else {
+        msg.textContent = 'All files are up to date.';
+        msg.className   = 'refresh-message';
+        btn.disabled    = true;
+      }
+    } catch (e) {
+      msg.textContent = 'Cannot reach backend.';
+      msg.className   = 'refresh-message error';
+    }
+  }
+
+  async function refreshData() {
+    const msg = document.getElementById('refreshMsg');
+    const btn = document.getElementById('ingestBtn');
+    btn.disabled    = true;
+    msg.textContent = 'Ingesting files… please wait.';
+    msg.className   = 'refresh-message';
+    try {
+      const data = await fetch(API + '/api/data/refresh', { method: 'POST' }).then(r => r.json());
+      if (data.success) {
+        msg.textContent = `✓ Done! ${data.proteins_added} proteins, ${data.domains_added} domains ingested.`;
+        msg.className   = 'refresh-message success';
+        HG.showToast(`Data refreshed — ${data.proteins_added} proteins loaded`, 'success');
+        loadStatus();
+      } else {
+        msg.textContent = 'Errors: ' + (data.errors || []).join(', ');
+        msg.className   = 'refresh-message error';
+      }
+    } catch (e) {
+      msg.textContent = 'Refresh failed — check backend.';
+      msg.className   = 'refresh-message error';
+    }
+  }
+
+  // ── Event listeners ────────────────────────────────────────────
+  const searchInput = document.getElementById('searchInput');
+  const searchType  = document.getElementById('searchType');
+  const searchBtn   = document.getElementById('searchBtn');
+
+  let debounce;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounce);
+    const q = searchInput.value.trim();
+    if (q.length < 2) return;
+    debounce = setTimeout(() => doSearch(q, searchType.value, 0), 500);
+  });
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') doSearch(searchInput.value.trim(), searchType.value, 0);
+  });
+  searchBtn.addEventListener('click', () => doSearch(searchInput.value.trim(), searchType.value, 0));
+
+  // ── Init ───────────────────────────────────────────────────────
+  loadStatus();
+
+  // Handle URL params (from family card links on home)
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) {
+    const q    = params.get('q');
+    const type = params.get('type') || 'keyword';
+    searchInput.value  = q;
+    searchType.value   = type;
+    doSearch(q, type, 0);
+  }
+</script>
+</body>
+</html>

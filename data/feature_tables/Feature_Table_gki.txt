@@ -1,0 +1,582 @@
+>Feature gb|AAK34323.1|
+1	323	Protein
+			product	glucose kinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_269602.1|
+1	323	Protein
+			product	glucose kinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_607614.1|
+1	323	Protein
+			product	glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAL98113.1|
+1	323	Protein
+			product	glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAM79787.1|
+1	323	Protein
+			product	putative glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_664984.1|
+1	323	Protein
+			product	glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAM99373.1|AE014213_12
+1	322	Protein
+			product	glucokinase
+6	317	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_687501.1|
+1	322	Protein
+			product	glucokinase
+6	317	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+1	322	Protein
+			product	glucokinase
+
+>Feature emb|CAD46162.1|
+1	322	Protein
+			product	Unknown
+6	317	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAN58285.1|AE014899_4
+1	323	Protein
+			product	putative glucose kinase
+			EC_number	2.7.1.2
+6	320	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_720979.1|
+1	323	Protein
+			product	glucose kinase
+6	320	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+1	323	Protein
+			product	glucokinase
+
+>Feature ref|NP_734982.1|
+1	322	Protein
+			product	hypothetical protein
+6	317	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature dbj|BAC63777.1|
+1	323	Protein
+			product	putative glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|NP_801944.1|
+1	323	Protein
+			product	glucose kinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAT87413.1|
+1	323	Protein
+			product	Glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_060596.1|
+1	323	Protein
+			product	glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAX72306.1|
+1	323	Protein
+			product	glucokinase
+			product	xylose repressor
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|AAZ51875.1|
+1	323	Protein
+			product	glucokinase/Xylose repressor
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_280661.1|
+1	323	Protein
+			product	glucokinase
+			product	xylose repressor
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_282620.1|
+1	323	Protein
+			product	glucokinase/xylose repressor
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|ABF32439.1|
+1	323	Protein
+			product	glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|ABF34338.1|
+1	323	Protein
+			product	Glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|ABF36329.1|
+1	323	Protein
+			product	Glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature gb|ABF38315.1|
+1	323	Protein
+			product	Glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_596983.1|
+1	323	Protein
+			product	glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_598882.1|
+1	323	Protein
+			product	Glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_600873.1|
+1	323	Protein
+			product	glucokinase
+			EC_number	2.7.1.2
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+
+>Feature ref|YP_602859.1|
+1	323	Protein
+			product	glucokinase
+6	323	Region
+			region_name	ROK_glcA_fam
+			note	ROK family protein (putative glucokinase)
+			db_xref	CDD:233110
+6	>131	Region
+			region_name	NBD_sugar-kinase_HSP70_actin
+			note	Nucleotide-Binding Domain of the sugar kinase/HSP70/actin superfamily
+			db_xref	CDD:212657
+9	12	Site
+14	14
+16	16
+114	114
+			order
+			site_type	nitrosylation
+			note	nucleotide binding site [chemical binding]
+			db_xref	CDD:212657
+

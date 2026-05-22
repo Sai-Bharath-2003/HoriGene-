@@ -1,0 +1,258 @@
+>Feature ref|NP_607219.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|AAL97718.1|
+1	193	Protein
+			product	putative xanthine phosphoribosyltransferase
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|NP_664598.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|NP_688095.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	176	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+156	156
+			order
+			site_type	active
+			db_xref	CDD:206754
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+
+>Feature emb|CAD46776.1|
+1	193	Protein
+			product	unknown
+38	176	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+156	156
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|NP_735563.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	176	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+156	156
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|AAT86989.1|
+1	193	Protein
+			product	Xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|YP_060172.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|AAX71945.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|YP_280300.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|ABF32162.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|ABF34037.1|
+1	193	Protein
+			product	Xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature gb|ABF37957.1|
+1	193	Protein
+			product	Xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|YP_596706.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+			EC_number	2.4.2.22
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|YP_598581.1|
+1	193	Protein
+			product	Xanthine phosphoribosyltransferase
+			EC_number	2.4.2.-
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+
+>Feature ref|YP_602501.1|
+1	193	Protein
+			product	xanthine phosphoribosyltransferase
+38	>138	Region
+			region_name	PRTases_typeI
+			note	Phosphoribosyl transferase (PRT)-type I domain
+			db_xref	CDD:206754
+58	58	Site
+60	60
+124	126
+128	132
+			order
+			site_type	active
+			db_xref	CDD:206754
+

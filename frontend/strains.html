@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strain Matrix — HoriGene</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-helix"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 4 C6 4 30 10 30 18 C30 26 6 32 6 32" stroke="#00d4aa" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M30 4 C30 4 6 10 6 18 C6 26 30 32 30 32" stroke="#0077ff" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="6" cy="4" r="2.5" fill="#00d4aa"/><circle cx="30" cy="4" r="2.5" fill="#0077ff"/><circle cx="18" cy="18" r="2" fill="#fff" opacity="0.8"/><circle cx="6" cy="32" r="2.5" fill="#00d4aa"/><circle cx="30" cy="32" r="2.5" fill="#0077ff"/></svg></div>
+      <div class="logo-text"><span class="logo-main">HoriGene</span><span class="logo-sub">BioClues Webserver</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link">Search</a>
+      <a href="strains.html" class="nav-link active">Strains</a>
+      <a href="ml.html" class="nav-link">ML Scores</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div style="padding-top:var(--nav-h);min-height:100vh">
+  <div style="background:var(--bg1);border-bottom:1px solid var(--border);padding:3rem 0 2rem">
+    <div class="container">
+      <span class="section-tag">Comparative Genomics</span>
+      <h1 class="section-title" style="text-align:left;margin-top:0.5rem">Strain Presence/Absence Matrix</h1>
+      <p style="color:var(--text-dim)">Gene presence across <em style="color:var(--teal)">Streptococcus</em> and <em style="color:var(--blue)">Lactobacillus</em> strains. Green = present, red = absent.</p>
+    </div>
+  </div>
+  <div class="container" style="padding:2rem">
+    <div id="matrixArea"><div class="loading-state"><div class="loading-dna"></div><p>Loading strain data…</p></div></div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+const FAMILIES = ['muts','mutl','recp','gki','xpt'];
+fetch('http://localhost:5000/api/strains').then(r => r.json()).then(data => {
+  if (!data.length) { document.getElementById('matrixArea').innerHTML='<div class="empty-state"><div class="empty-helix">🔬</div><div class="empty-title">No strain data loaded yet</div><div class="empty-sub">Run a data refresh from the Search page</div></div>'; return; }
+  const rows = data.map(strain => {
+    const geneMap = {};
+    (strain.genes || []).forEach(g => { geneMap[g.gene_family] = g; });
+    return `<tr>
+      <td style="padding:0.55rem 0.8rem;color:var(--text-dim);white-space:nowrap;font-size:0.82rem">${strain.strain}</td>
+      ${FAMILIES.map(f => {
+        const g = geneMap[f];
+        if (!g) return `<td class="m-none"><span>—</span></td>`;
+        return g.present
+          ? `<td class="m-present" title="${g.accession || ''}"><span>✓</span></td>`
+          : `<td class="m-absent"><span>✗</span></td>`;
+      }).join('')}
+    </tr>`;
+  }).join('');
+  document.getElementById('matrixArea').innerHTML = `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+      <div style="display:flex;gap:1.5rem;padding:1rem 1.5rem;border-bottom:1px solid var(--border);flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--teal)"><span style="display:inline-block;width:14px;height:14px;background:rgba(0,212,170,0.15);border-radius:3px;text-align:center;font-size:0.65rem;line-height:14px">✓</span> Present</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#f87171"><span style="display:inline-block;width:14px;height:14px;background:rgba(239,68,68,0.1);border-radius:3px;text-align:center;font-size:0.65rem;line-height:14px">✗</span> Absent</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-muted)"><span style="display:inline-block;width:14px;height:14px;background:rgba(255,255,255,0.03);border-radius:3px;text-align:center;font-size:0.65rem;line-height:14px">—</span> No data</span>
+      </div>
+      <div class="matrix-wrap">
+        <table class="matrix-table">
+          <thead><tr>
+            <th>Strain</th>
+            ${FAMILIES.map(f=>`<th>${f.toUpperCase()}</th>`).join('')}
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}).catch(() => {
+  document.getElementById('matrixArea').innerHTML='<div class="empty-state"><div class="empty-helix">⚠️</div><div class="empty-title">Backend offline</div><div class="empty-sub">Start Flask server: python run.py</div></div>';
+});
+</script>
+</body>
+</html>

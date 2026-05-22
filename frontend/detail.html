@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protein Detail — HoriGene</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-helix"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 4 C6 4 30 10 30 18 C30 26 6 32 6 32" stroke="#00d4aa" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M30 4 C30 4 6 10 6 18 C6 26 30 32 30 32" stroke="#0077ff" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="6" cy="4" r="2.5" fill="#00d4aa"/><circle cx="30" cy="4" r="2.5" fill="#0077ff"/><circle cx="18" cy="18" r="2" fill="#fff" opacity="0.8"/><circle cx="6" cy="32" r="2.5" fill="#00d4aa"/><circle cx="30" cy="32" r="2.5" fill="#0077ff"/></svg></div>
+      <div class="logo-text"><span class="logo-main">HoriGene</span><span class="logo-sub">BioClues Webserver</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link">Search</a>
+      <a href="strains.html" class="nav-link">Strains</a>
+      <a href="ml.html" class="nav-link">ML Scores</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="detail-page" id="detailPage">
+  <div class="loading-state" style="padding-top:8rem">
+    <div class="loading-dna"></div><p>Loading protein…</p>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+const API = 'http://localhost:5000';
+const acc = new URLSearchParams(location.search).get('acc');
+
+async function loadProtein() {
+  if (!acc) { document.getElementById('detailPage').innerHTML = '<div class="container" style="padding-top:6rem"><p>No accession specified.</p></div>'; return; }
+  try {
+    const data = await fetch(API + '/api/protein/' + encodeURIComponent(acc)).then(r => { if (!r.ok) throw r; return r.json(); });
+    render(data);
+  } catch (e) {
+    document.getElementById('detailPage').innerHTML = `<div class="container" style="padding-top:6rem">
+      <div class="empty-state"><div class="empty-helix">⚠️</div>
+      <div class="empty-title">Protein not found</div>
+      <div class="empty-sub">Accession <code>${acc}</code> was not found in the database.</div>
+      <a href="search.html" style="color:var(--teal);margin-top:1rem;display:inline-block">← Back to search</a>
+      </div></div>`;
+  }
+}
+
+function render(data) {
+  const p = data.protein;
+  const maxLen = p.length || 1000;
+
+  document.title = `${p.accession} — HoriGene`;
+
+  const domainsHTML = data.domains.length ? data.domains.map(d => `
+    <div class="domain-row">
+      <div class="domain-name">${d.region_name || 'Domain'}</div>
+      <div class="domain-bar-wrap" title="${d.start_pos}–${d.end_pos}">
+        <div class="domain-bar" style="margin-left:${(d.start_pos/maxLen*100).toFixed(1)}%;width:${((d.end_pos-d.start_pos)/maxLen*100).toFixed(1)}%"></div>
+      </div>
+      <div class="domain-pos">${d.start_pos}–${d.end_pos}</div>
+      <div class="domain-xref">${d.db_xref || ''}</div>
+    </div>
+  `).join('') : '<p style="color:var(--text-muted);font-size:0.85rem">No domain annotations</p>';
+
+  const sitesHTML = data.sites.length ? `<table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+    <tr><th style="text-align:left;padding:0.4rem 0.6rem;color:var(--text-muted);border-bottom:1px solid var(--border)">Type</th>
+        <th style="text-align:left;padding:0.4rem 0.6rem;color:var(--text-muted);border-bottom:1px solid var(--border)">Note</th>
+        <th style="text-align:left;padding:0.4rem 0.6rem;color:var(--text-muted);border-bottom:1px solid var(--border)">Residues</th></tr>
+    ${data.sites.map(s => `<tr>
+      <td style="padding:0.5rem 0.6rem;border-bottom:1px solid rgba(255,255,255,0.04)">${s.site_type || '—'}</td>
+      <td style="padding:0.5rem 0.6rem;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-dim)">${s.note || '—'}</td>
+      <td style="padding:0.5rem 0.6rem;border-bottom:1px solid rgba(255,255,255,0.04);font-family:var(--font-mono);font-size:0.78rem;color:var(--teal)">${s.residues || '—'}</td>
+    </tr>`).join('')}
+  </table>` : '<p style="color:var(--text-muted);font-size:0.85rem">No site annotations</p>';
+
+  const strainsHTML = data.strain_presence.length ? `<table class="strain-table">
+    <tr><th>Strain</th><th>Accession</th><th>Status</th></tr>
+    ${data.strain_presence.map(s => `<tr>
+      <td style="color:var(--text-dim)">${s.strain_name}</td>
+      <td style="font-family:var(--font-mono);font-size:0.78rem">${s.accession || '—'}</td>
+      <td>${s.present ? '<span class="present-badge">PRESENT</span>' : '<span class="absent-badge">ABSENT</span>'}</td>
+    </tr>`).join('')}
+  </table>` : '<p style="color:var(--text-muted);font-size:0.85rem">No strain data available</p>';
+
+  // ML scores for this gene family — group by feature
+  const features = [...new Set(data.ml_scores.map(m => m.feature_name))];
+  const mlHTML = features.length ? features.map(feat => {
+    const scores = data.ml_scores.filter(m => m.feature_name === feat).sort((a,b) => a.error_percent - b.error_percent);
+    const best = scores[0];
+    return `<div style="margin-bottom:1.2rem">
+      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.4rem;font-family:var(--font-mono)">${feat}</div>
+      <div style="display:flex;align-items:center;gap:0.8rem">
+        <div style="font-size:0.82rem;min-width:140px;color:var(--text-dim)">${best.algorithm}</div>
+        <div style="flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden">
+          <div style="height:100%;width:${100-Math.min(best.error_percent,100)}%;background:linear-gradient(to right,var(--teal),#00a885);border-radius:4px"></div>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--teal);min-width:60px">${best.error_percent.toFixed(2)}% err</div>
+      </div>
+    </div>`;
+  }).join('') : '<p style="color:var(--text-muted);font-size:0.85rem">No ML scores available</p>';
+
+  document.getElementById('detailPage').innerHTML = `
+    <div class="detail-header">
+      <div class="container">
+        <a href="search.html" class="detail-back">← Back to Search</a>
+        <div class="detail-accession">${p.accession}</div>
+        <h1 class="detail-title">${p.product || 'Unknown Protein'}</h1>
+        <div class="detail-meta">
+          <span class="protein-family-tag tag-${p.gene_family}">${p.gene_family.toUpperCase()}</span>
+          ${p.ec_number ? `<span class="chip">EC ${p.ec_number}</span>` : ''}
+          ${p.length ? `<span class="chip">${p.length} amino acids</span>` : ''}
+          <span class="chip">${data.domains.length} domains</span>
+          <span class="chip">${data.sites.length} sites</span>
+        </div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div class="container">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-panel">
+              <div class="detail-panel-header">Domain Architecture <span style="color:var(--text-muted);font-weight:400">${data.domains.length} regions</span></div>
+              <div class="detail-panel-body">
+                ${p.length ? `<div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem"><span>1</span><span>${p.length} aa</span></div>` : ''}
+                ${domainsHTML}
+              </div>
+            </div>
+            <div class="detail-panel">
+              <div class="detail-panel-header">Active & Binding Sites <span style="color:var(--text-muted);font-weight:400">${data.sites.length} sites</span></div>
+              <div class="detail-panel-body">${sitesHTML}</div>
+            </div>
+            <div class="detail-panel">
+              <div class="detail-panel-header">Strain Presence/Absence</div>
+              <div class="detail-panel-body" style="padding:0;overflow:hidden">${strainsHTML}</div>
+            </div>
+          </div>
+          <div>
+            <div class="detail-panel">
+              <div class="detail-panel-header">Protein Info</div>
+              <div class="detail-panel-body">
+                <div style="display:flex;flex-direction:column;gap:0.8rem;font-size:0.85rem">
+                  <div><div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px">Accession</div><div style="font-family:var(--font-mono)">${p.accession}</div></div>
+                  <div><div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px">Gene Family</div><span class="protein-family-tag tag-${p.gene_family}">${p.gene_family.toUpperCase()}</span></div>
+                  ${p.ec_number ? `<div><div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px">EC Number</div><div style="font-family:var(--font-mono)">${p.ec_number}</div></div>` : ''}
+                  ${p.length ? `<div><div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px">Length</div><div>${p.length} amino acids</div></div>` : ''}
+                  <div><div style="color:var(--text-muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px">Source</div><div style="font-size:0.78rem;color:var(--text-muted)">${p.source_file}</div></div>
+                </div>
+                <hr style="border:none;border-top:1px solid var(--border);margin:1.2rem 0"/>
+                <a href="https://www.ncbi.nlm.nih.gov/protein/${p.accession}" target="_blank" style="display:flex;align-items:center;gap:6px;color:var(--teal);text-decoration:none;font-size:0.85rem;margin-bottom:0.5rem">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  View on NCBI
+                </a>
+              </div>
+            </div>
+            <div class="detail-panel">
+              <div class="detail-panel-header">ML Prediction Scores</div>
+              <div class="detail-panel-body">${mlHTML}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+loadProtein();
+</script>
+</body>
+</html>
